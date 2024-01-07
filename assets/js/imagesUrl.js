@@ -1,1 +1,1 @@
-const lockScreenUrl = window.localtion.origin + '/assets/images/lock-screen-wallpaper.png';
+const lockScreenUrl = window.location.origin + '/assets/images/lock-screen-wallpaper.png';
