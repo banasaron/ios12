@@ -17,9 +17,9 @@ const mainScreenAppIconTwo = document.querySelector(".mainScreenAppIconTwo");
 const mainScreenAppIconThree = document.querySelector(".mainScreenAppIconThree");
 
 
-mainScreenAppIconOne.style.background  = "url('/assets/images/notes.png') center/cover no-repeat";
-mainScreenAppIconTwo.style.background  = "url('/assets/images/snake.png') center/cover no-repeat";
-mainScreenAppIconThree.style.background  = "url('/assets/images/info.png') center/cover no-repeat";
+mainScreenAppIconOne.style.background  = "url("+notesUrl+") center/cover no-repeat";
+mainScreenAppIconTwo.style.background  = "url("+snakeUrl+") center/cover no-repeat";
+mainScreenAppIconThree.style.background  = "url("+infoUrl+") center/cover no-repeat";
 
 const dateSpan = document.querySelector("#dateSpan");
 const timeSpan = document.querySelector("#timeSpan");
@@ -43,7 +43,7 @@ function updateBatteryStatus(){
         // alert("zamieniono klase 2");
         clearInterval(batteryInterval);
         batteryInterval = null;
-        content.style.background = "url('/assets/images/battery-empty.png') center/contain no-repeat black";
+        content.style.background = "url("+battery_emptyUrl+") center/contain no-repeat black";
         childrenContent.forEach(child =>{
             child.style.opacity = "0";
         });
@@ -63,7 +63,7 @@ function powerOnOff(){
             switch (isPower) {
                 case true:
                 
-                    content.style.background = "url('../images/lock-screen-wallpaper.png') center/cover no-repeat"
+                    content.style.background = "url("+lockScreenUrl+") center/cover no-repeat"
                     childrenContent.forEach(child =>{
                         child.style.opacity = "1";
                     });

@@ -90,7 +90,7 @@ function lockingDisplay(){
 function unlockingDisplay(){
     locked = false;
     content.style.gridTemplateRows = "2.4fr 9.4fr 3.5fr";
-    content.style.background = "url('/assets/images/main-wallpaper-1.png') center/cover no-repeat";
+    content.style.background = "url("+main_wallpaper_1Url+") center/cover no-repeat";
     topSpan.classList.replace('topLockScreenSpan', 'topMainScreenSpan');
     
     topSpanInterval = setInterval(topSpanTimeDisplay, 10);
