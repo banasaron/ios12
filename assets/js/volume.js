@@ -8,8 +8,8 @@ const volume_img = document.querySelector("#volume-img");
 let volumeN = 100; //default
 let volume_level = 10;
 let apperingCooldown;
-let bugnake_backgroundmusic = new Audio("/assets/audio/bugsnake background music (undertale - fallen down).mp3");
-let point = new Audio("/assets/audio/point.mp3");
+let bugnake_backgroundmusic = new Audio(bugnake_backgroundmusicUrl);
+let point = new Audio(pointUrl);
 
 // console.log(volumeN+"  |||  "+ volume_level)
 function muting(){

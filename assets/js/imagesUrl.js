@@ -1,3 +1,4 @@
+//images
 const arrowDownUrl = window.location.origin + '/ios12/assets/images/arrowDown.png';
 const arrowLeftUrl = window.location.origin + '/ios12/assets/images/arrowLeft.png';
 const arrowRightUrl = window.location.origin + '/ios12/assets/images/arrowRight.png';
@@ -20,3 +21,8 @@ const volumeTwoUrl = window.location.origin + '/ios12/assets/images/volume2.png'
 const volumeThreeUrl = window.location.origin + '/ios12/assets/images/volume3.png';
 const wifi_statusUrl = window.location.origin + '/ios12/assets/images/wifi-status.png';
 const wirelessUrl = window.location.origin + '/ios12/assets/images/wireless.png';
+
+
+//audios
+const bugnake_backgroundmusicUrl = window.location.origin + '/ios/assets/audio/bugsnake background music (undertale - fallen down).mp3';
+const pointUrl = window.location.origin + '/ios/assets/audio/point.mp3';
