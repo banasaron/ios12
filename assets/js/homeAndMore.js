@@ -113,6 +113,7 @@ function unlockingDisplay(){
     bottomLockP.style.display = "none"
     // alert("odblokowane")
 }
+
 button.addEventListener("mousedown", ()=>{
     pressStartTime = new Date().getTime();
 });
@@ -129,3 +130,27 @@ function unlockingPhone(){
 };
 
 button.addEventListener('mouseup', unlockingPhone);
+let touchStartTime;
+let touchAnimationId;
+
+button.addEventListener('touchstart', () => {
+    touchStartTime = Date.now();
+    touchAnimationId = requestAnimationFrame(checkTouchDuration);
+});
+
+button.addEventListener('touchend', () => {
+    cancelAnimationFrame(touchAnimationId);
+    touchStartTime = null;
+});
+
+function checkTouchDuration() {
+    const elapsed = Date.now() - touchStartTime;
+
+    if (elapsed >= holdDuration) {
+        // Przytrzymanie przez wystarczająco długi czas
+        unlockingDisplay();
+    } else {
+        // Kontynuuj sprawdzanie czasu
+        touchAnimationId = requestAnimationFrame(checkTouchDuration);
+    }
+}
