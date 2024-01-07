@@ -1,0 +1,445 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    user-select: none;
+}
+body{
+    background: #faeed1;
+    overflow: hidden;
+}
+a{
+    font-size: large;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 20fr 1fr;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    transition: transform 1s ease-in-out;
+}
+
+#telefon {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    
+    width: calc(76px * 5);
+    height: calc(138px * 5);
+    background-image: url("../images/container.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 99;
+}
+
+.content {
+    
+    
+    position: relative;
+    grid-row: 2;
+    grid-column: 2;
+    width: calc(72px * 5);
+    height: calc(138px * 5);
+    background-color: green;
+    background-image: url("../images/lock-screen-wallpaper.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: 3.6fr 8.7fr 3.5fr;
+    border-radius: 14%;
+    
+}
+#topSpan{
+    border-radius: 15% 15% 0 0;
+}
+#topSpan, #middleSpan, #bottomSpan{
+    transition: all .2s ease-in-out;
+    /* z-index: 99; */
+    position: relative;
+    overflow-x: hidden;
+}
+#bottomSpan{
+    border-radius: 0 0 40px 40px;
+}
+/*---------------------------------SIDE BUTTONS OF THE PHONE----------------------------------------------*/
+#pwr-btn {
+    /* background-color: red; */
+    height: 45px;
+    width: 7px;
+    position: absolute;
+    top: 25.5%; 
+    right: -2.5%; 
+    cursor: pointer;
+    z-index: 999;
+}
+#mute-btn{
+    /* background-color: orange; */
+    height: 30px;
+    width: 7px;
+    position: absolute;
+    top: 17.7%;
+    left: -3.2%;
+    cursor: pointer;
+    z-index: 999;
+}
+#volumeup-btn{
+    /* background-color: aqua; */
+    height: 42px;
+    width: 7px;
+    position: absolute;
+    top: 25.6%;
+    left: -3.2%;
+    cursor: pointer;
+    z-index: 999;
+}
+#volumedown-btn{
+    /* background-color: forestgreen; */
+    height: 42px;
+    width: 7px;
+    position: absolute;
+    top: 34.3%;
+    left: -3.2%;
+    cursor: pointer;
+    z-index: 999;
+}
+#home-btn{
+    /* background-color: gray; */
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 999;
+}
+#volume-bar{
+    /* background-color: #F6D776; */
+    height: 140px;
+    width: 140px;
+    border-radius: 7%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(40px);
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.8fr 0.3fr;
+    grid-row-gap: 2px;
+    place-items: center;
+    color: white;
+    font-weight: bold;
+    pointer-events: none;
+}
+#volume-bar img{
+    width: 60%;
+}
+#volume-bar div#volume-row{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    width: 85%;
+    height: 15%;
+    background-color: black;
+    grid-gap: 1px;
+}
+#volume-bar div#volume-row .volume-row-element{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+/*------------------------------------------------------LOCK SCREEN DISPLAY--------------------------------------------------------------*/
+
+.middleLockScreenSpan{
+    text-align: center;
+    color: #fff;
+    transition: opacity 0.2s ease-in-out;
+
+}
+
+#timeSpan {
+    font-size: calc(60px - 20%);
+}
+
+#dateSpan {
+    font-size: calc(25px - 20%);
+}
+
+.topLockScreenSpan{
+    align-items: center;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 10px;
+    margin-top: 30px;
+    transition: opacity 0.2s ease-in-out;
+}
+#wireless-status img{
+    height: 12px;
+}
+#battery-status{
+    text-align: center;
+    margin-left: 18px;
+    margin-bottom: 5px;
+}
+ 
+
+.bottomLockScreenSpan{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+/*------------------------------------------------MAIN SCREEN DISPLAY---------------------------------------------*/
+.bottomMainScreenSpan{
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: top;
+}
+.navDivOne, .navDivTwo, .navDivThree, .navDivFour{
+    height: 52px;
+    width: 52px;
+    background-color: black;
+    margin-top: 14px;
+    border-radius: 20%;
+    display: none;
+}
+.middleMainScreenSpan{
+    display: grid;
+    margin: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5 , 1fr);
+    row-gap: 10px;
+
+}
+.topMainScreenSpan{
+    align-items: end;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px;
+    margin-top: 20px;
+    transition: opacity 0.2s ease-in-out;
+}
+.mainScreenAppIconOne, .mainScreenAppIconTwo, .mainScreenAppIconThree{
+    height: 60px;
+    width: 60px;
+    background-color: blue;
+    border-radius: 20%;
+    align-self: center;
+    justify-self: center;
+    display: none;
+    place-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.mainScreenAppIconOne::after{
+    content: "Notes";
+    position: absolute;
+    bottom: -15px;
+    color: #fff;
+    font-size: 12px;
+}
+.mainScreenAppIconTwo::after{
+    content: "Bugsnake";
+    position: absolute;
+    bottom: -15px;
+    color: #fff;
+    font-size: 12px;
+}
+.mainScreenAppIconThree::after{
+    content: "Info";
+    position: absolute;
+    bottom: -15px;
+    color: #fff;
+    font-size: 12px;
+}
+canvas {
+    background-color: #454545;
+    display: none;
+    justify-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; 
+    padding: 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border-radius: 10%;
+    color: #FAEF9B;
+    background-color: #647D87;
+}
+#gameOver:hover{
+    color: #F6D776;
+    background-color: #6DA4AA;
+}
+
+#startButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none; 
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border: none;
+    color: black;
+    background-color: beige;
+    border-radius: 10%;
+    text-transform: uppercase;
+    
+}
+#startButton:hover{
+    background-color: #FAEF9B;
+    color: #444;
+}
+#closeGameSnake{
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+    cursor: pointer;
+    /* z-index: 99; */
+    grid-column: 5;
+    
+    transform: rotate(-45deg);
+}
+#closeGameSnake::after{
+    content: "+";
+    color: #fff;
+    font-size: 60px;
+}
+#notes-input{
+    display: none;
+    height: 100%;
+    width: 93%;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+    word-spacing: 7px;
+}
+#notes-input:focus-visible{
+    outline: none;
+}
+#closeNotesBtn{
+    position: absolute;
+    left: 87%;
+    top: -2%;
+
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+    transform: rotate(-45deg);
+}
+#closeNotesBtn::after{
+    content: "+";
+    color: #fff;
+    font-size: 60px;
+}
+
+#infoContent{
+    display: none;
+    width: 88%;
+    background-color: transparent;
+    margin: 10px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 35px;
+}
+#closeInfoBtn{
+    position: absolute;
+    left: 87%;
+    top: -2%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+    transform: rotate(-45deg);
+}
+#closeInfoBtn::after{
+    content: "+";
+    color: #fff;
+    font-size: 60px;
+}
+#switching_langiages_info{
+    position: absolute;
+    left: 63%;
+    top: 2%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+    width: 80px;
+    height: 35px;
+}
+/* -------------------------------------------------------MEDIA BUTTONS -------------------------------------------------------------------------- */
+.directionBtn{
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    position: absolute;
+    z-index: 99;
+    bottom: 59%;
+    border-radius: 50%;
+    display: none;
+}
+#downButton.directionBtn {
+    left: 32%;
+    background-image: url("../images/arrowDown.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#upButton.directionBtn {
+    right: 32%;
+    background-image: url("../images/arrowUp.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#leftButton.directionBtn {
+    left: 8%;
+    background-image: url("../images/arrowLeft.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#rightButton.directionBtn {
+    right: 8%;
+    background-image: url("../images/arrowRight.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

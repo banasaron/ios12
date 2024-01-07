@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefon</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/battery-full.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/battery.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/battery-empty.css' rel='stylesheet'>
+    <script src="assets/js/timer.js"></script>
+    
+</head>
+<body>
+    
+    <div class="container">  
+        <div class="content">
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div id="topSpan" class="topLockScreenSpan">
+                <div id="wireless-status">
+                    <img src="assets/images/wireless.png" alt="">
+                    <img src="assets/images/wifi-status.png" alt="">
+                </div>
+                <div id="screen-status">
+                    <i style="font-size: 20px;" class="fa">&#xf023;</i>
+                </div>
+                <div id="battery-status">
+                    <i class='gg-battery-full' id='battery'></i>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div id="middleSpan" class="middleLockScreenSpan">
+                <p id="infoContent"></p>
+                <div id="closeInfoBtn"></div>
+                <div id="switching_langiages_info"></div>
+
+                <textarea id="notes-input"></textarea>
+                <div id="closeNotesBtn"></div>
+
+                <canvas></canvas>
+                <button id="startButton" >Start</button>
+                <button id="gameOver"></button>
+                <div id="closeGameSnake"></div>
+
+
+                <div id="timeSpan"></div>
+                <div id="dateSpan"></div>
+
+
+
+                <div class="mainScreenAppIconOne" id="notesIcon"></div>
+                <div class="mainScreenAppIconTwo" id="snakeGameIcon"></div>
+                <div class="mainScreenAppIconThree" id="infoIcon"></div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------------->
+            <div id="bottomSpan" class="bottomLockScreenSpan">
+                <div class="directionBtn" id="upButton"></div>
+                <div class="directionBtn" id="downButton"></div>
+                <div class="directionBtn" id="leftButton"></div>
+                <div class="directionBtn" id="rightButton"></div>
+
+                <p id="home">Hold <b>Home</b> to unlock</p>
+                
+                <div class="navDivOne"></div>
+                <div class="navDivTwo"></div>
+                <div class="navDivThree"></div>
+                <div class="navDivFour"></div>
+            </div>    
+            <div id="pwr-btn"></div>
+            <div id="mute-btn"></div>
+            <div id="volumeup-btn"></div>
+            <div id="volumedown-btn"></div>
+            <div id="volume-bar">
+                <span>Volume</span>
+                <img src="assets/images/volume2.png" alt="" id="volume-img">
+                <div id="volume-row"></div>
+            </div>
+            <div id="home-btn"></div>
+        </div>
+        <div id="telefon"></div>
+        
+        
+    </div>
+
+    <!-- <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script> -->
+    <script src="assets/js/volume.js"></script>
+    <script src="assets/js/power.js"></script>
+    <script src="assets/js/rotating.js"></script>
+    <script src="assets/js/chargerAnimation.js"></script>
+    <script src="assets/js/homeAndMore.js"></script>
+    <script src="assets/js/bugsnake.js"></script>
+    <script src="assets/js/notes.js"></script>
+    <script src="assets/js/info.js"></script>
+</body>
+</html>
