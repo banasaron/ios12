@@ -45,7 +45,7 @@ function lockingDisplay(){
     locked = true;
     isOn = false;
     content.style.gridTemplateRows = "3.6fr 8.7fr 3.5fr";
-    content.style.background = "url('/ios12/assets/images/lock-screen-wallpaper.png') center/cover no-repeat";
+    content.style.background = "url("+lockScreenUrl+") center/cover no-repeat";
     topSpan.classList.replace("topMainScreenSpan", "topLockScreenSpan");
     middleSpan.classList.replace("middleMainScreenSpan", "middleLockScreenSpan");
     bottomSpan.classList.replace("bottomMainScreenSpan", "bottomLockScreenSpan");
