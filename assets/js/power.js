@@ -63,7 +63,7 @@ function powerOnOff(){
             switch (isPower) {
                 case true:
                     
-                    content.style.background = "url('/assets/images/lock-screen-wallpaper.png') center/cover no-repeat"
+                    content.style.background = "url('../images/lock-screen-wallpaper.png') center/cover no-repeat"
                     childrenContent.forEach(child =>{
                         child.style.opacity = "1";
                     });
