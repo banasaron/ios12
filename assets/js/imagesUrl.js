@@ -24,5 +24,5 @@ const wirelessUrl = window.location.origin + '/ios12/assets/images/wireless.png'
 
 
 //audios
-const bugnake_backgroundmusicUrl = window.location.origin + '/ios/assets/audio/bugsnake background music (undertale - fallen down).mp3';
-const pointUrl = window.location.origin + '/ios/assets/audio/point.mp3';
+const bugnake_backgroundmusicUrl = window.location.origin + '/ios12/assets/audio/bugsnake background music (undertale - fallen down).mp3';
+const pointUrl = window.location.origin + '/ios12/assets/audio/point.mp3';
